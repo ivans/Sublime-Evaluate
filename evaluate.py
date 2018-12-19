@@ -4,6 +4,7 @@ import sublime_plugin
 import threading
 import math
 import datetime
+import dateutil
 import subprocess
 
 sublime_version = 2
@@ -100,7 +101,8 @@ class EvaluateCall(threading.Thread):
             try:
                 tmp_global = {
                     "math": math,
-                    "datetime": datetime
+                    "datetime": datetime,
+                    "dateutil": dateutil
                 }
                 code = compile(self.original, '<string>', 'eval')
                 self.result = eval(code, tmp_global)

@@ -2,7 +2,7 @@
 A powerful plugin which returns the value of selected regions.
 
 # Evaluation Environment
-Sublime Evaluate is able to evaluate the `math` and `datetime` import as part of its enviroment. This opens up access to a whole range of Python functions such as:
+Sublime Evaluate is able to evaluate the `math`, `datetime` and `dateutil` import as part of its enviroment. This opens up access to a whole range of Python functions such as:
 
 ```python
 math.atan2(80, 40)
@@ -12,6 +12,8 @@ math.pi * 60
 datetime.date(2013,4,2) # Returns a formatted date
 
 datetime.date.today()
+
+dateutil.parser.parse('10/1/2018 12:10:13 AM') # returns: 2018-10-01 12:10:13
 ```
 
 We can also perform morecomplex expressions such as:
